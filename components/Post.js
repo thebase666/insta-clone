@@ -101,7 +101,7 @@ function Post({ id, username, userImg, img, caption }) {
                             <p className="flex-1 text-sm">
                                 <span className="mr-2 font-bold">{comment.data().username}</span>{comment.data().comment}</p>
                             <Moment fromNow className="pr-5 text-xs">
-                                {comment.data().timestamp.toDate()}
+                                {comment.data().timestamp?.toDate()}
                             </Moment>
                         
                         </div>
