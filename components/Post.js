@@ -32,7 +32,7 @@ function Post({ id, username, userImg, img, caption }) {
     ), []);
 
     useEffect(() => {
-        setHasLiked(likes.findIndex((like) => (like.id) === session.user.name) !== -1)
+        setHasLiked(likes.findIndex((like) => (like.id) === session?.user?.name) !== -1)
     }, [likes]);
     
     // 测试条件返回true, findIndex() 返回符合条件的元素的索引位置，之后的值不会再调用执行函数。
