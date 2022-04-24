@@ -87,11 +87,16 @@ function Post({ id, username, userImg, img, caption }) {
                     <BookmarkIcon className="btn" />
                 </div>
             )}
-            <p className="p-5 trancate">
-                {likes.length > 0 && (
-                    <p className="mb-1 font-bold">{likes.length} likes</p>
-                )}
-                <span className="mr-2 font-bold">{username}</span> {caption}</p>
+            {likes.length > 0 && (
+                <p className="p-2 font-bold">{likes.length} likes</p>
+            )}
+            <p className="p-5 ">
+                {/* truncate 就显示一行   */}
+                <span className="mr-2 font-bold">{username}</span>
+                <a target="_blank" href={caption} rel="noopener noreferrer">
+                    {caption}
+                </a>
+            </p>
 
             {comments.length > 0 && (
                 <div className="ml-10 overflow-y-scroll h-30 scrollbar-track-black scrollbar-thin">
